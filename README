@@ -1,0 +1,29 @@
+# timeleft
+A script inspired by the `timeleft` command from Counterstrike 1.6 servers.
+
+This is a simple script that scrapes a Google calendar to find time until your
+next event. This will find the first N events that start or end after the
+current time. So you can use this in class or a meeting by typing
+
+    $ timeleft
+    5:51:34 until DRNK 4175 Alcohol and Algorithms
+
+Caching the calendar hasn't been implemented yet, so don't run this script
+10,000 times and exhaust all your API calls.
+
+## Instructions
+Before you start, make sure you get a Google developer API key for Google
+Calendar. Or else you won't be able to authenticate.
+
+1. Install Google calendar Python library
+2. Edit `settings.py` to your liking.
+3. Make a symlink and put it into an executable path, e.g. `~/bin`
+
+    $ ln -s timeleft.py ~/bin/timeleft
+    $ timeleft
+    5:51:34 until DRNK 4175 Alcohol and Algorithms
+
+## TODO
+[ ] Use the old CS 1.6 announcer that says the timeleft
+[ ] Keep a cache of the calendar to reduce API fetches
+
